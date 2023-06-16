@@ -38,4 +38,3 @@ O Trello é uma ferramenta de uso individual para você controlar o andamento da
 
 Bom projeto!
 
-Atividade
