@@ -1,78 +1,79 @@
-  body {
-          background-image: url("Home.png");
-          font-family: 'Silkscreen', cursive; sans-serif;
+body {
+    background-image: url("Home (2).png");
+    margin: 0;
+    font-family: 'Silkscreen', cursive; sans-serif;
 
-        }
+  }
 
-        h1 {
-          color: #000;
-          text-align: center;
-          padding: 10px;
-          font-size: 50px;
-          text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
+  h1 {
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #0a0a0a, 2px -2px 0 #030303, -2px 2px 0 #000000;
 
-        }
+  }
 
-        label {
-          font-weight: bold;
-          Rigth:12vw
-          position: relative
-          border: 20px solid black;
-        }
+  label {
+    font-weight: bold;
+    Rigth:12vw
+    position: relative
+    border: 20px solid black;
+  }
 
-         textarea {
-          width: 400px;
-          height: 150px;
-          padding: 10px;
-          border-radius: 10px;
-          border: 1px solid black;         
-          outline: none;
-          resize: none;
-          margin: auto;
-          display: block;
-        }
+   textarea {
+    width: 400px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;         
+    outline: none;
+    resize: none;
+    margin: auto;
+    display: block;
+  }
 
-        button {
-          display: inline-block;
-          background-color: #000;
-          color: white;
-          padding: 20px 20px;
-          border-radius: 20px;
-          border: none;
-          font-weight: bold;
-          margin-right: 20px;
-          margin-top: 1vw
-          border: 1px solid black;
+  button {
+    display: inline-block;
+    background-color: #000;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-top: 1vw
+    border: 1px solid black;
 
-        }
+  }
 
-        button:hover {
-          background-color: #363636;
-          cursor: pointer;
-          border: 1px solid black;
-        }
+  button:hover {
+    background-color: #363636;
+    cursor: pointer;
+    border: 1px solid black;
+  }
 
-          
-        hr {
-          margin: 50px auto;
-          width: 80%;
-          border: 1px solid black;
-        }
+    
+  hr {
+    margin: 50px auto;
+    width: 80%;
+    border: 1px solid black;
+  }
 
-        footer {
-          text-align: center;
-          color: black;
-          border: 1px solid black;
-        }
+  footer {
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+  }
 
-       .container {
-        text-align: center;
-        color: white;
-        border: 1px solid black;
-      }
-        .aviso {
-          font-size: 10px;
-          color: #ff0000;
-          margin-top: 0;
-          margin-bottom: 10px;
-        }
+ .container {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+}
+  .aviso {
+    font-size: 10px;
+    color: #ff0000;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
