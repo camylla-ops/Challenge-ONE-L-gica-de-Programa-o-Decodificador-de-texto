@@ -1,79 +1,79 @@
 body {
-    background-image: url("Home (2).png");
+    font-family: 'Silkscreen', sans-serif;
     margin: 0;
-    font-family: 'Silkscreen', cursive; sans-serif;
-
-  }
-
-  h1 {
-    color: #000;
-    text-align: center;
-    padding: 10px;
-    font-size: 50px;
-    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #0a0a0a, 2px -2px 0 #030303, -2px 2px 0 #000000;
-
-  }
-
-  label {
-    font-weight: bold;
-    Rigth:12vw
-    position: relative
-    border: 20px solid black;
-  }
-
-   textarea {
-    width: 400px;
-    height: 150px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid black;         
-    outline: none;
-    resize: none;
-    margin: auto;
-    display: block;
-  }
-
-  button {
-    display: inline-block;
-    background-color: #000;
-    color: white;
-    padding: 20px 20px;
-    border-radius: 20px;
-    border: none;
-    font-weight: bold;
-    margin-right: 20px;
-    margin-top: 1vw
-    border: 1px solid black;
-
-  }
-
-  button:hover {
-    background-color: #363636;
-    cursor: pointer;
-    border: 1px solid black;
-  }
-
-    
-  hr {
-    margin: 50px auto;
-    width: 80%;
-    border: 1px solid black;
-  }
-
-  footer {
-    text-align: center;
-    color: black;
-    border: 1px solid black;
-  }
-
- .container {
-  text-align: center;
-  color: rgb(0, 0, 0);
-  border: 1px solid black;
+    padding: 0;
+    background-color: #f8f9fa; 
+    color: #333;
 }
-  .aviso {
-    font-size: 10px;
-    color: #ff0000;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
+
+.container {
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 15px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.input, .output {
+    margin-bottom: 30px; 
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    border-radius: 6px; 
+}
+
+.buttons, .copy {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+button {
+    padding: 12px 25px; 
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.copy button {
+    background-color: #28a745;
+}
+
+.copy button:hover {
+    background-color: #218838; 
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px; 
+    color: #777;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0; 
+}
