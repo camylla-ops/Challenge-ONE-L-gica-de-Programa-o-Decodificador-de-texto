@@ -1,44 +1,37 @@
-# Decodificador
-Challenge ONE | Lógica de Programação | Decodificador de texto
 
+# 🔐 Decodificador de Texto - Challenge ONE
 
-Descrição
-Boas vindas ao primeiro desafio!
+[![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](LICENSE)
+[![Demo](https://img.shields.io/badge/Demo-Live-2EA44F?style=flat&logo=github-pages&logoColor=white)](https://camylla-ops.github.io/Challenge-ONE-L-gica-de-Programa-o-Decodificador-de-texto/)
+[![Status do Projeto](https://img.shields.io/badge/Status-Concluído-brightgreen)](https://github.com/camylla-ops/Challenge-ONE-L-gica-de-Programa-o-Decodificador-de-texto/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-Durante estas duas semanas, vamos trabalhar em uma aplicação que criptografa textos, assim você poderá trocar mensagens secretas com outras pessoas que saibam o segredo da criptografia utilizada.
+Uma ferramenta web para criptografia e descriptografia de textos desenvolvida como solução para o Challenge ONE da Oracle + Alura.
 
-As "chaves" de criptografia que utilizaremos são:
-A letra "e" é convertida para "enter"
-A letra "i" é convertida para "imes"
-A letra "a" é convertida para "ai"
-A letra "o" é convertida para "ober"
-A letra "u" é convertida para "ufat"
+![Captura de Tela do Decodificador](./screenshot.png)
 
-Requisitos:
-- Deve funcionar apenas com letras minúsculas
-- Não devem ser utilizados letras com acentos nem caracteres especiais
-- Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
+## ✨ Funcionalidades
 
-Por exemplo:
-"gato" => "gaitober"
-gaitober" => "gato"
+- Criptografia de texto com substituições específicas:
+  - `e` → `enter`
+  - `i` → `imes`
+  - `a` → `ai`
+  - `o` → `ober`
+  - `u` → `ufat`
+- Descriptografia de texto codificado
+- Validação de entrada (apenas letras minúsculas sem acentos)
+- Funcionalidade de copiar resultado
+- Design responsivo
+- Interface intuitiva e amigável
 
-A página deve ter campos para inserção do texto a ser criptografado ou descriptografado, e a pessoa usuária deve poder escolher entre as duas opções
-O resultado deve ser exibido na tela.
-Extras:
-- Um botão que copie o texto criptografado/descriptografado para a área de transferência - ou seja, que tenha a mesma funcionalidade do ctrl+C ou da opção "copiar" do menu dos aplicativos.
+## 🚀 Como Usar
 
-Temos um período de tempo de quatro semanas para desenvolver o projeto e vamos trabalhar com o sistema ágil de desenvolvimento, utilizando o Trello da seguinte forma:
+### Pré-requisitos
+- Navegador moderno (Chrome, Firefox, Edge)
 
-A coluna Pronto pra iniciar apresenta os cartões com os elementos ainda não desenvolvidos.
-Já na coluna Desenvolvendo ficarão os elementos que você estiver desenvolvendo no momento. Ao iniciar uma tarefa, você poderá mover o cartão que contém a tarefa para esta coluna.
-No Pausado estarão os elementos que você começou a desenvolver, mas precisou parar por algum motivo.
-Por fim, a coluna Concluído terá os elementos já concluídos.
-O Trello é uma ferramenta de uso individual para você controlar o andamento das suas atividades, mas ela não será avaliada.
-
-Bom projeto!
-
-
-github-pages
- 
-https://camylla-ops.github.io/Challenge-ONE-L-gica-de-Programa-o-Decodificador-de-texto/
+### Instalação
+```bash
+git clone https://github.com/camylla-ops/Challenge-ONE-L-gica-de-Programa-o-Decodificador-de-texto.git
+cd Challenge-ONE-L-gica-de-Programa-o-Decodificador-de-texto
