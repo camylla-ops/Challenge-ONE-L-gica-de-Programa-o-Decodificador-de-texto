@@ -1,79 +1,101 @@
+/* Definição de variáveis de cores e fontes */
+:root {
+    --cor-primaria: #2A2F4F;
+    --cor-secundaria: #917FB3;
+    --cor-fundo: #FDE2F3;
+    --cor-texto: #2A2F4F;
+    --cor-borda: rgba(42, 47, 79, 0.1);
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do corpo da página */
 body {
-    font-family: 'Silkscreen', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; 
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    padding: 1rem;
 }
 
+/* Estilização do container principal */
 .container {
-    max-width: 800px; 
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 15px; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
 }
 
-.header {
+/* Estilização do título principal */
+h1 {
+    font-family: 'Silkscreen', cursive;
+    color: var(--cor-primaria);
     text-align: center;
-    margin-bottom: 30px; 
+    margin-bottom: 2rem;
 }
 
-.input, .output {
-    margin-bottom: 30px; 
-}
-
-label {
-    font-weight: bold;
-}
-
+/* Estilização das áreas de texto */
 textarea {
     width: 100%;
-    padding: 6px;
-    border: 1px solid #ccc;
+    padding: 1rem;
+    border: 2px solid var(--cor-borda);
     border-radius: 8px;
-    resize: none;
-    border-radius: 6px; 
+    resize: vertical;
+    margin: 1rem 0;
 }
 
-.buttons, .copy {
-    text-align: center;
-    margin-top: 20px; 
+/* Estilização dos botões */
+.botoes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
 }
 
 button {
-    padding: 12px 25px; 
-    background-color: #007bff;
+    padding: 0.8rem 1.5rem;
     border: none;
-    color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 16px; 
+    font-weight: 600;
+    transition: transform 0.2s;
+    background-color: var(--cor-primaria);
+    color: white;
 }
 
 button:hover {
-    background-color: #0056b3;
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
 
+/* Estilização específica para o campo de resultado */
+#resultado {
+    background-color: #f8f9fa;
+}
+
+/* Estilização da mensagem de aviso */
+.aviso {
+    color: #E74646;
+    font-size: 0.875rem;
+}
+
+/* Estilização específica para o botão de copiar */
 .copy button {
-    background-color: #28a745;
+    background-color: #4CAF50;
 }
 
-.copy button:hover {
-    background-color: #218838; 
-}
-
-.footer {
-    text-align: center;
-    margin-top: 30px; 
-    color: #777;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 20px 0; 
+/* Estilização responsiva para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .botoes {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
 }

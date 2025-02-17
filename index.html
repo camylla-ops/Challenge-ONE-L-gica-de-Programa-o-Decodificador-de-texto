@@ -1,116 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decodificador</title>
+    <title>Decodificador de Texto</title>
+    <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
+    <!-- Fonte externa -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;600&display=swap">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Decodificador</h1>
+        <h1>🔐 Decodificador</h1>
+        
+        <div class="input">
+            <label for="texto">Texto:</label>
+            <p class="aviso">⚠️ Use apenas letras minúsculas sem acentos ou caracteres especiais</p>
+            <textarea id="texto" rows="5" placeholder="Digite seu texto aqui..."></textarea>
         </div>
-        <div class="content">
-            <div class="input">
-                <label for="texto">Texto:</label>
-                <p class="aviso">Digite apenas letras minúsculas. Não utilize letras com acentos nem caracteres especiais.</p>
-                <textarea id="texto" rows="5" placeholder="Digite o texto aqui"></textarea>
-            </div>
-            <div class="buttons">
-                <button onclick="criptografar()">Criptografar</button>
-                <button onclick="descriptografar()">Descriptografar</button>
-            </div>
-            <div class="output">
-                <label for="resultado">Resultado:</label>
-                <textarea id="resultado" rows="5" readonly></textarea>
-            </div>
-            <div class="copy">
-                <button onclick="copiarResultado()">Copiar</button>
-            </div>
+
+        <div class="botoes">
+            <button onclick="criptografar()">🔒 Criptografar</button>
+            <button onclick="descriptografar()">🔑 Descriptografar</button>
         </div>
-        <div class="footer">
-            <hr>
-            <p>Desenvolvido por Camylla Oliveira</p>
+
+        <div class="output">
+            <label for="resultado">Resultado:</label>
+            <textarea id="resultado" rows="5" readonly></textarea>
+        </div>
+
+        <div class="copy">
+            <button onclick="copiarResultado()">📋 Copiar Resultado</button>
         </div>
     </div>
 
     <script>
+        // Função para validar o texto de entrada
+        function validarTexto(texto) {
+            return /^[a-z\s]+$/.test(texto);
+        }
+
+        // Função para criptografar o texto
         function criptografar() {
             const texto = document.getElementById("texto").value;
             
-            if (texto !== texto.toLowerCase()) {
-                alert("Por favor, utilize apenas letras minúsculas.");
+            if (!validarTexto(texto)) {
+                alert("Por favor, utilize apenas letras minúsculas sem acentos!");
                 return;
             }
-        
-            let resultado = "";
-            for (let i = 0; i < texto.length; i++) {
-                switch (texto[i]) {
-                    case "e":
-                        resultado += "enter";
-                        break;
-                    case "i":
-                        resultado += "imes";
-                        break;
-                    case "a":
-                        resultado += "ai";
-                        break;
-                    case "o":
-                        resultado += "ober";
-                        break;
-                    case "u":
-                        resultado += "ufat";
-                        break;
-                    default:
-                        resultado += texto[i];
-                }
-            }
+
+            const resultado = texto
+                .replace(/e/g, "enter")
+                .replace(/i/g, "imes")
+                .replace(/a/g, "ai")
+                .replace(/o/g, "ober")
+                .replace(/u/g, "ufat");
+            
             document.getElementById("resultado").value = resultado;
         }
-        
-          
+
+        // Função para descriptografar o texto
         function descriptografar() {
             const texto = document.getElementById("texto").value;
-        
-            if (texto !== texto.toLowerCase()) {
-                alert("Por favor, utilize apenas letras minúsculas.");
+            
+            if (!validarTexto(texto)) {
+                alert("Texto contém caracteres inválidos!");
                 return;
             }
-        
-            let resultado = "";
-            for (let i = 0; i < texto.length; i++) {
-                if (texto[i] === "e" && texto[i+1] === "n" && texto[i+2] === "t" && texto[i+3] === "e" && texto[i+4] === "r") {
-                    resultado += "e";
-                    i += 4;
-                } else if (texto[i] === "i" && texto[i+1] === "m" && texto[i+2] === "e" && texto[i+3] === "s") {
-                    resultado += "i";
-                    i += 3;
-                } else if (texto[i] === "a" && texto[i+1] === "i") {
-                    resultado += "a";
-                    i += 1;
-                } else if (texto[i] === "o" && texto[i+1] === "b" && texto[i+2] === "e" && texto[i+3] === "r") {
-                    resultado += "o";
-                    i += 3;
-                } else if (texto[i] === "u" && texto[i+1] === "f" && texto[i+2] === "a" && texto[i+3] === "t") {
-                    resultado += "u";
-                    i += 3;
-                } else {
-                    resultado += texto[i];
-                }
-            }
+
+            const resultado = texto
+                .replace(/enter/g, "e")
+                .replace(/imes/g, "i")
+                .replace(/ai/g, "a")
+                .replace(/ober/g, "o")
+                .replace(/ufat/g, "u");
+            
             document.getElementById("resultado").value = resultado;
         }
-        
 
+        // Função para copiar o resultado para a área de transferência
         function copiarResultado() {
             const resultado = document.getElementById("resultado");
             resultado.select();
-            document.execCommand("copy");
-            alert("Texto copiado para a área de transferência!");
+            navigator.clipboard.writeText(resultado.value)
+                .then(() => alert("Texto copiado!"))
+                .catch(() => alert("Erro ao copiar!"));
         }
-        
     </script>
 </body>
 </html>
