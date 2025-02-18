@@ -4,7 +4,7 @@
     --cor-secundaria: #917FB3;
     --cor-fundo: #FDE2F3;
     --cor-texto: #2A2F4F;
-    --cor-borda: rgba(42, 47, 79, 0.1);
+    --cor-borda: rgba(42, 47, 79, 0.3);
     --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -15,12 +15,15 @@ body {
     color: var(--cor-texto);
     min-height: 100vh;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Estilização do container principal */
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
     background: white;
     padding: 2rem;
     border-radius: 12px;
@@ -36,13 +39,25 @@ h1 {
 }
 
 /* Estilização das áreas de texto */
-textarea {
+textarea, #resultado {
     width: 100%;
+    max-width: 100%;
+    min-height: 120px;
     padding: 1rem;
     border: 2px solid var(--cor-borda);
     border-radius: 8px;
     resize: vertical;
     margin: 1rem 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: left; /* Garante alinhamento do texto */
+    display: block; /* Evita bugs de inline */
+}
+
+/* Correção do alinhamento do placeholder */
+textarea::placeholder {
+    text-align: left;
+    color: var(--cor-secundaria);
 }
 
 /* Estilização dos botões */
@@ -72,12 +87,18 @@ button:hover {
 /* Estilização específica para o campo de resultado */
 #resultado {
     background-color: #f8f9fa;
+    min-height: 50px;
 }
 
 /* Estilização da mensagem de aviso */
 .aviso {
     color: #E74646;
     font-size: 0.875rem;
+}
+
+/* Ajuste do alerta no textarea */
+textarea:invalid {
+    border-color: #E74646;
 }
 
 /* Estilização específica para o botão de copiar */
@@ -97,5 +118,10 @@ button:hover {
     
     button {
         width: 100%;
+    }
+    
+    textarea, #resultado {
+        font-size: 0.9rem;
+        padding: 0.8rem;
     }
 }
